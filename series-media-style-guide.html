@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Series Media — Master Brand & UI Style Guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          sm: {
+            bg: '#0d091a',
+            footer: '#080512',
+            card: '#18122b',
+            cardAccent: '#24174b',
+            primary: '#392972',
+            purple: '#858bd1',
+            coral: '#ff5733',
+            coralLight: '#ff7b54',
+          }
+        },
+        fontFamily: {
+          sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
+          display: ['Space Grotesk', 'sans-serif']
+        }
+      }
+    }
+  }
+</script>
+<style>
+  :root {
+    --sm-bg: #0d091a;
+    --sm-card: #18122b;
+    --sm-purple: #858bd1;
+    --sm-coral: #ff5733;
+  }
+  body {
+    background-color: #0d091a;
+    color: #ffffff;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar { width: 8px; }
+  ::-webkit-scrollbar-track { background: #0d091a; }
+  ::-webkit-scrollbar-thumb { background: #24174b; border-radius: 4px; }
+  ::-webkit-scrollbar-thumb:hover { background: #858bd1; }
+  
+  /* Code Snippet Box */
+  pre {
+    background: #080512;
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 0.75rem;
+    padding: 1rem;
+    overflow-x: auto;
+    font-size: 0.875rem;
+    color: #858bd1;
+  }
+</style>
+</head>
+<body class="min-h-screen bg-[#0d091a] text-white selection:bg-[#ff5733] selection:text-white">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-[#0d091a]/90 backdrop-blur-md border-b border-white/10 py-5">
+    <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+      <div class="flex items-center gap-4">
+        <img src="https://seriesmedia.net/wp-content/uploads/2024/02/Series-Media-Logo-2.png" alt="Series Media" class="h-10 w-auto object-contain" />
+        <span class="bg-[#858bd1]/15 text-[#858bd1] text-xs px-3 py-1 rounded-full font-bold uppercase tracking-wider border border-[#858bd1]/20">Style Guide v1.0</span>
+      </div>
+      <a href="#snippets" class="text-sm font-semibold text-white/80 hover:text-white transition-colors">Jump to Code Snippets &rarr;</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="py-16 border-b border-white/10 bg-gradient-to-b from-[#18122b] to-[#0d091a]">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <h1 class="font-display text-4xl sm:text-5xl font-bold tracking-tight mb-4">
+        Series Media <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#858bd1] to-[#ff5733]">Design System & Style Guide</span>
+      </h1>
+      <p class="text-gray-400 text-lg max-w-2xl mx-auto leading-relaxed">
+        The single source of truth for creating brand-aligned Web Pages, Interactive Applications, Proposals, and GoHighLevel Funnels.
+      </p>
+    </div>
+  </section>
+
+  <!-- Navigation Anchor Bar -->
+  <nav class="sticky top-[73px] z-40 bg-[#080512]/95 backdrop-blur-md border-b border-white/10 py-3">
+    <div class="max-w-7xl mx-auto px-6 flex flex-wrap gap-4 text-sm font-semibold text-gray-400">
+      <a href="#colors" class="hover:text-[#ff5733] transition-colors">1. Color Palette</a>
+      <a href="#typography" class="hover:text-[#ff5733] transition-colors">2. Typography</a>
+      <a href="#buttons" class="hover:text-[#ff5733] transition-colors">3. Buttons & CTAs</a>
+      <a href="#cards" class="hover:text-[#ff5733] transition-colors">4. Cards & Containers</a>
+      <a href="#forms" class="hover:text-[#ff5733] transition-colors">5. Form Controls</a>
+      <a href="#interactive" class="hover:text-[#ff5733] transition-colors">6. Interactive & Proposal Modules</a>
+      <a href="#wordpress" class="hover:text-[#ff5733] transition-colors">7. WordPress & GHL Rules</a>
+    </div>
+  </nav>
+
+  <main class="max-w-7xl mx-auto px-6 py-12 space-y-20">
+
+    <!-- 1. COLOR PALETTE -->
+    <section id="colors" class="scroll-mt-32">
+      <div class="mb-8">
+        <h2 class="text-2xl font-bold font-display text-white mb-2">1. Color Palette & Design Tokens</h2>
+        <p class="text-gray-400">Exact HEX, RGB, and Tailwind classes used across the platform.</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Deep Dark Background -->
+        <div class="bg-[#18122b] p-5 rounded-2xl border border-white/10">
+          <div class="h-24 rounded-xl bg-[#0d091a] border border-white/10 mb-4 flex items-center justify-center">
+            <span class="text-xs font-mono text-gray-400">#0d091a</span>
+          </div>
+          <h3 class="font-bold text-white mb-1">Deep Navy BG</h3>
+          <p class="text-xs text-gray-400 mb-2">Primary page background</p>
+          <code class="text-xs text-[#858bd1]">bg-[#0d091a]</code>
+        </div>
+
+        <!-- Footer Dark BG -->
+        <div class="bg-[#18122b] p-5 rounded-2xl border border-white/10">
+          <div class="h-24 rounded-xl bg-[#080512] border border-white/10 mb-4 flex items-center justify-center">
+            <span class="text-xs font-mono text-gray-400">#080512</span>
+          </div>
+          <h3 class="font-bold text-white mb-1">Footer Dark BG</h3>
+          <p class="text-xs text-gray-400 mb-2">Footer & nested containers</p>
+          <code class="text-xs text-[#858bd1]">bg-[#080512]</code>
+        </div>
+
+        <!-- Card Container BG -->
+        <div class="bg-[#18122b] p-5 rounded-2xl border border-white/10">
+          <div class="h-24 rounded-xl bg-[#18122b] border border-white/10 mb-4 flex items-center justify-center">
+            <span class="text-xs font-mono text-gray-400">#18122b</span>
+          </div>
+          <h3 class="font-bold text-white mb-1">Card Container</h3>
+          <p class="text-xs text-gray-400 mb-2">Card and modal background</p>
+          <code class="text-xs text-[#858bd1]">bg-[#18122b]</code>
+        </div>
+
+        <!-- Soft Purple Accent -->
+        <div class="bg-[#18122b] p-5 rounded-2xl border border-white/10">
+          <div class="h-24 rounded-xl bg-[#858bd1] mb-4 flex items-center justify-center">
+            <span class="text-xs font-mono text-black font-bold">#858bd1</span>
+          </div>
+          <h3 class="font-bold text-white mb-1">Soft Purple / Lavender</h3>
+          <p class="text-xs text-gray-400 mb-2">Subtitles, badges, secondary accents</p>
+          <code class="text-xs text-[#858bd1]">text-[#858bd1]</code>
+        </div>
+
+        <!-- Coral CTA Gradient Start -->
+        <div class="bg-[#18122b] p-5 rounded-2xl border border-white/10">
+          <div class="h-24 rounded-xl bg-[#ff5733] mb-4 flex items-center justify-center">
+            <span class="text-xs font-mono text-white font-bold">#ff5733</span>
+          </div>
+          <h3 class="font-bold text-white mb-1">Vibrant Coral CTA</h3>
+          <p class="text-xs text-gray-400 mb-2">Primary actions & button gradient start</p>
+          <code class="text-xs text-[#858bd1]">bg-[#ff5733]</code>
+        </div>
+
+        <!-- Coral CTA Gradient End -->
+        <div class="bg-[#18122b] p-5 rounded-2xl border border-white/10">
+          <div class="h-24 rounded-xl bg-[#ff7b54] mb-4 flex items-center justify-center">
+            <span class="text-xs font-mono text-white font-bold">#ff7b54</span>
+          </div>
+          <h3 class="font-bold text-white mb-1">Light Coral Accent</h3>
+          <p class="text-xs text-gray-400 mb-2">Gradient transition end state</p>
+          <code class="text-xs text-[#858bd1]">bg-[#ff7b54]</code>
+        </div>
+
+        <!-- Primary Purple -->
+        <div class="bg-[#18122b] p-5 rounded-2xl border border-white/10">
+          <div class="h-24 rounded-xl bg-[#392972] mb-4 flex items-center justify-center">
+            <span class="text-xs font-mono text-white font-bold">#392972</span>
+          </div>
+          <h3 class="font-bold text-white mb-1">Deep Purple</h3>
+          <p class="text-xs text-gray-400 mb-2">Brand base theme color</p>
+          <code class="text-xs text-[#858bd1]">bg-[#392972]</code>
+        </div>
+
+        <!-- Border Subtlety -->
+        <div class="bg-[#18122b] p-5 rounded-2xl border border-white/10">
+          <div class="h-24 rounded-xl bg-white/5 border border-white/10 mb-4 flex items-center justify-center">
+            <span class="text-xs font-mono text-gray-300">rgba(255,255,255,0.1)</span>
+          </div>
+          <h3 class="font-bold text-white mb-1">Subtle Glass Border</h3>
+          <p class="text-xs text-gray-400 mb-2">Card & navigation dividers</p>
+          <code class="text-xs text-[#858bd1]">border-white/10</code>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. TYPOGRAPHY -->
+    <section id="typography" class="scroll-mt-32">
+      <div class="mb-8">
+        <h2 class="text-2xl font-bold font-display text-white mb-2">2. Typography & Hierarchy</h2>
+        <p class="text-gray-400">Headings use <strong>Space Grotesk</strong> or <strong>Plus Jakarta Sans</strong> with tracking-tight. Body uses <strong>Plus Jakarta Sans</strong> or <strong>Inter</strong>.</p>
+      </div>
+
+      <div class="bg-[#18122b] p-8 rounded-2xl border border-white/10 space-y-6">
+        <div>
+          <span class="text-xs font-mono text-[#858bd1] uppercase">H1 — Hero Display Heading</span>
+          <h1 class="text-4xl sm:text-5xl font-extrabold font-display tracking-tight text-white mt-1">
+            Transform Your Sports Business Operations
+          </h1>
+        </div>
+        <hr class="border-white/10" />
+
+        <div>
+          <span class="text-xs font-mono text-[#858bd1] uppercase">H2 — Section Heading</span>
+          <h2 class="text-3xl font-bold font-display tracking-tight text-white mt-1">
+            Engineered for Scale & High Conversion
+          </h2>
+        </div>
+        <hr class="border-white/10" />
+
+        <div>
+          <span class="text-xs font-mono text-[#858bd1] uppercase">H3 — Feature / Card Heading</span>
+          <h3 class="text-xl font-bold font-display text-white mt-1">
+            Interactive Efficiency Audits
+          </h3>
+        </div>
+        <hr class="border-white/10" />
+
+        <div>
+          <span class="text-xs font-mono text-[#858bd1] uppercase">Body Regular Text</span>
+          <p class="text-base text-gray-300 leading-relaxed max-w-3xl mt-1">
+            Better operations start with solving the right problem. Our custom systems eliminate manual admin, streamline client onboarding, and automate your revenue pipelines.
+          </p>
+        </div>
+        <hr class="border-white/10" />
+
+        <div>
+          <span class="text-xs font-mono text-[#858bd1] uppercase">Microcopy & Captions</span>
+          <p class="text-xs text-gray-400 mt-1">
+            © 2026 Series Media Limited. All rights reserved. Strictly confidential proposal document.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. BUTTONS & CTAS -->
+    <section id="buttons" class="scroll-mt-32">
+      <div class="mb-8">
+        <h2 class="text-2xl font-bold font-display text-white mb-2">3. Buttons & Call-to-Actions (CTAs)</h2>
+        <p class="text-gray-400">Interactive button variants with glow shadows and smooth transitions.</p>
+      </div>
+
+      <div class="bg-[#18122b] p-8 rounded-2xl border border-white/10 space-y-8">
+        <!-- Variant Showcase -->
+        <div class="flex flex-wrap items-center gap-6">
+          <!-- Primary Coral Pill -->
+          <div>
+            <a href="#" class="inline-flex items-center justify-center px-6 py-3 text-sm font-bold rounded-full text-white bg-gradient-to-r from-[#ff5733] to-[#ff7b54] shadow-[0_4px_15px_rgba(255,87,51,0.4)] hover:shadow-[0_6px_25px_rgba(255,87,51,0.6)] hover:scale-[1.02] transition-all">
+              Primary Coral CTA &rarr;
+            </a>
+            <p class="text-xs text-gray-400 mt-2 text-center font-mono">Primary Action</p>
+          </div>
+
+          <!-- Secondary Glass Outline -->
+          <div>
+            <a href="#" class="inline-flex items-center justify-center px-6 py-3 text-sm font-semibold rounded-full text-white bg-white/5 border border-white/15 hover:bg-white/10 hover:border-white/30 transition-all">
+              Secondary Outline
+            </a>
+            <p class="text-xs text-gray-400 mt-2 text-center font-mono">Secondary Option</p>
+          </div>
+
+          <!-- Purple Accent Button -->
+          <div>
+            <a href="#" class="inline-flex items-center justify-center px-6 py-3 text-sm font-bold rounded-full text-white bg-[#392972] border border-[#858bd1]/30 hover:bg-[#858bd1]/20 hover:border-[#858bd1] transition-all">
+              Purple Interactive
+            </a>
+            <p class="text-xs text-gray-400 mt-2 text-center font-mono">Interactive State</p>
+          </div>
+        </div>
+
+        <!-- Code Snippet -->
+        <div>
+          <span class="text-xs font-mono text-gray-400 uppercase mb-2 block">HTML Snippet — Primary Coral Button:</span>
+          <pre><code>&lt;a href="YOUR_LINK" class="inline-flex items-center justify-center px-6 py-3 text-sm font-bold rounded-full text-white bg-gradient-to-r from-[#ff5733] to-[#ff7b54] shadow-[0_4px_15px_rgba(255,87,51,0.4)] hover:shadow-[0_6px_25px_rgba(255,87,51,0.6)] hover:scale-[1.02] transition-all"&gt;
+  Get Started Today &amp;rarr;
+&lt;/a&gt;</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. CARDS & CONTAINERS -->
+    <section id="cards" class="scroll-mt-32">
+      <div class="mb-8">
+        <h2 class="text-2xl font-bold font-display text-white mb-2">4. Cards, Badges & Containers</h2>
+        <p class="text-gray-400">Glassmorphism layers, dark card wrappers, and status badges.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Feature Card -->
+        <div class="bg-[#18122b] p-6 rounded-2xl border border-white/10 hover:border-[#858bd1]/50 transition-all group">
+          <div class="w-12 h-12 rounded-xl bg-[#858bd1]/15 text-[#858bd1] flex items-center justify-center font-bold text-lg mb-4 group-hover:scale-110 transition-transform">
+            ⚡
+          </div>
+          <span class="bg-[#858bd1]/15 text-[#858bd1] text-[11px] px-2.5 py-0.5 rounded-full font-bold uppercase tracking-wider">Module 01</span>
+          <h3 class="text-xl font-bold text-white mt-3 mb-2">Automation Pipeline</h3>
+          <p class="text-sm text-gray-400 leading-relaxed">
+            Seamlessly integrate custom diagnostic web forms with instant proposal routing.
+          </p>
+        </div>
+
+        <!-- Interactive Proposal Card -->
+        <div class="bg-gradient-to-b from-[#24174b] to-[#18122b] p-6 rounded-2xl border border-[#858bd1]/30 relative overflow-hidden">
+          <div class="absolute -right-8 -top-8 w-24 h-24 bg-[#ff5733]/20 rounded-full blur-xl"></div>
+          <span class="bg-[#ff5733]/20 text-[#ff5733] text-[11px] px-2.5 py-0.5 rounded-full font-bold uppercase tracking-wider border border-[#ff5733]/30">Recommended</span>
+          <h3 class="text-xl font-bold text-white mt-3 mb-1">Growth Tier</h3>
+          <div class="text-3xl font-extrabold text-white my-3">£2,450 <span class="text-xs text-gray-400 font-normal">/ project</span></div>
+          <p class="text-sm text-gray-300 mb-4 leading-relaxed">
+            Complete custom web architecture, diagnostic funnel, and automated proposal system.
+          </p>
+          <button class="w-full py-2.5 rounded-full text-sm font-bold text-white bg-gradient-to-r from-[#ff5733] to-[#ff7b54]">Select Tier</button>
+        </div>
+
+        <!-- Glass Badge Collection -->
+        <div class="bg-[#18122b] p-6 rounded-2xl border border-white/10 flex flex-col justify-between">
+          <div>
+            <h3 class="text-lg font-bold text-white mb-3">Status Badges & Tags</h3>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="bg-[#858bd1]/15 text-[#858bd1] text-xs px-3 py-1 rounded-full font-bold border border-[#858bd1]/20">Active Project</span>
+              <span class="bg-[#ff5733]/15 text-[#ff5733] text-xs px-3 py-1 rounded-full font-bold border border-[#ff5733]/20">Priority Lead</span>
+              <span class="bg-emerald-500/15 text-emerald-400 text-xs px-3 py-1 rounded-full font-bold border border-emerald-500/20">Approved</span>
+            </div>
+          </div>
+          <p class="text-xs text-gray-400">Use pill badges for metadata, proposal statuses, and feature highlights.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. FORM CONTROLS -->
+    <section id="forms" class="scroll-mt-32">
+      <div class="mb-8">
+        <h2 class="text-2xl font-bold font-display text-white mb-2">5. Form Controls & Interactive Inputs</h2>
+        <p class="text-gray-400">Dark-mode input fields for interactive forms, lead funnels, and proposal calculators.</p>
+      </div>
+
+      <div class="bg-[#18122b] p-8 rounded-2xl border border-white/10 max-w-2xl space-y-5">
+        <div>
+          <label class="block text-xs font-bold uppercase tracking-wider text-gray-300 mb-2">Full Name</label>
+          <input type="text" placeholder="John Doe" class="w-full bg-[#0d091a] border border-white/15 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-[#858bd1] focus:ring-1 focus:ring-[#858bd1] transition-all" />
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold uppercase tracking-wider text-gray-300 mb-2">Business Type</label>
+          <select class="w-full bg-[#0d091a] border border-white/15 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-[#858bd1] transition-all">
+            <option>Sports Coaching Academy</option>
+            <option>Fitness Enterprise</option>
+            <option>Media & Publishing</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold uppercase tracking-wider text-gray-300 mb-2">Project Scope</label>
+          <textarea rows="3" placeholder="Describe your requirements..." class="w-full bg-[#0d091a] border border-white/15 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-[#858bd1] transition-all"></textarea>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. INTERACTIVE & PROPOSAL MODULES -->
+    <section id="interactive" class="scroll-mt-32">
+      <div class="mb-8">
+        <h2 class="text-2xl font-bold font-display text-white mb-2">6. Interactive & Proposal Modules</h2>
+        <p class="text-gray-400">Pre-built interactive UI components for proposals, calculators, and client presentations.</p>
+      </div>
+
+      <!-- Interactive Calculator Demo -->
+      <div class="bg-[#18122b] p-8 rounded-2xl border border-white/10 space-y-6">
+        <div class="flex justify-between items-center flex-wrap gap-4 border-b border-white/10 pb-4">
+          <div>
+            <h3 class="text-xl font-bold text-white">Interactive Proposal Estimator</h3>
+            <p class="text-sm text-gray-400">Select modules to build your interactive scope.</p>
+          </div>
+          <div class="text-right">
+            <span class="text-xs text-gray-400 uppercase font-bold block">Estimated Investment</span>
+            <span id="prop-total" class="text-3xl font-extrabold text-[#ff5733]">£1,500</span>
+          </div>
+        </div>
+
+        <div class="space-y-3">
+          <label class="flex items-center justify-between p-4 rounded-xl bg-[#0d091a] border border-white/10 cursor-pointer hover:border-[#858bd1]/40 transition-all">
+            <div class="flex items-center gap-3">
+              <input type="checkbox" checked class="w-5 h-5 accent-[#ff5733] rounded" onchange="updateCalc(this, 1500)" />
+              <div>
+                <span class="font-bold text-white block">Core Web Architecture & Design</span>
+                <span class="text-xs text-gray-400">High-performance custom Elementor/HTML layout</span>
+              </div>
+            </div>
+            <span class="font-mono text-sm text-[#858bd1] font-bold">£1,500</span>
+          </label>
+
+          <label class="flex items-center justify-between p-4 rounded-xl bg-[#0d091a] border border-white/10 cursor-pointer hover:border-[#858bd1]/40 transition-all">
+            <div class="flex items-center gap-3">
+              <input type="checkbox" class="w-5 h-5 accent-[#ff5733] rounded" onchange="updateCalc(this, 750)" />
+              <div>
+                <span class="font-bold text-white block">Diagnostic Tool Funnel Integration</span>
+                <span class="text-xs text-gray-400">Interactive multi-step audit system</span>
+              </div>
+            </div>
+            <span class="font-mono text-sm text-[#858bd1] font-bold">£750</span>
+          </label>
+
+          <label class="flex items-center justify-between p-4 rounded-xl bg-[#0d091a] border border-white/10 cursor-pointer hover:border-[#858bd1]/40 transition-all">
+            <div class="flex items-center gap-3">
+              <input type="checkbox" class="w-5 h-5 accent-[#ff5733] rounded" onchange="updateCalc(this, 500)" />
+              <div>
+                <span class="font-bold text-white block">GHL & CRM Automation Setup</span>
+                <span class="text-xs text-gray-400">Automated lead routing & email notifications</span>
+              </div>
+            </div>
+            <span class="font-mono text-sm text-[#858bd1] font-bold">£500</span>
+          </label>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. WORDPRESS & GHL RULES -->
+    <section id="wordpress" class="scroll-mt-32">
+      <div class="mb-8">
+        <h2 class="text-2xl font-bold font-display text-white mb-2">7. WordPress, Elementor & GHL Integration Standards</h2>
+        <p class="text-gray-400">Strict container breakout CSS and modular header/footer loading rules.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Astra Container Breakout Rule -->
+        <div class="bg-[#18122b] p-6 rounded-2xl border border-white/10 space-y-3">
+          <h3 class="text-lg font-bold text-white">Astra / Elementor Full-Width Breakout</h3>
+          <p class="text-xs text-gray-400">Add this CSS class to your top-level wrapper inside Elementor HTML widgets to force edge-to-edge full width:</p>
+          <pre><code>.sm-full-breakout {
+  width: 100vw !important;
+  position: relative !important;
+  left: 50% !important;
+  right: 50% !important;
+  margin-left: -50vw !important;
+  margin-right: -50vw !important;
+  box-sizing: border-box !important;
+}</code></pre>
+        </div>
+
+        <!-- GoHighLevel Wrapper Rule -->
+        <div class="bg-[#18122b] p-6 rounded-2xl border border-white/10 space-y-3">
+          <h3 class="text-lg font-bold text-white">GoHighLevel (GHL) Custom Code Wrapper</h3>
+          <p class="text-xs text-gray-400">Wrap all GHL custom funnel code inside this container for full dark mode styling compatibility:</p>
+          <pre><code>&lt;div class="sm-ghl-wrapper" style="background-color: #0d091a; color: #ffffff; width: 100%;"&gt;
+  &lt;!-- Page Content Here --&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="bg-[#080512] border-t border-white/10 py-8 text-center text-xs text-gray-500">
+    Series Media Master Design System & Style Guide &copy; 2026. All rights reserved.
+  </footer>
+
+  <script>
+    let currentTotal = 1500;
+    function updateCalc(checkbox, amount) {
+      if (checkbox.checked) {
+        currentTotal += amount;
+      } else {
+        currentTotal -= amount;
+      }
+      document.getElementById('prop-total').innerText = '£' + currentTotal.toLocaleString();
+    }
+  </script>
+</body>
+</html>

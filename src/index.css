@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+@theme {
+  --color-sm-bg: #0d091a;
+  --color-sm-footer: #080512;
+  --color-sm-card: #18122b;
+  --color-sm-cardAccent: #24174b;
+  --color-sm-primary: #392972;
+  --color-sm-purple: #858bd1;
+  --color-sm-coral: #ff5733;
+
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Space Grotesk', sans-serif;
+}
+
+@layer base {
+  :root {
+    --sm-bg-light: #f8f7fd;
+    --sm-bg: #0d091a;
+    --sm-footer: #080512;
+    --sm-card: #18122b;
+    --sm-cardAccent: #24174b;
+    --sm-primary: #392972;
+    --sm-purple: #858bd1;
+    --sm-coral: #ff5733;
+  }
+
+  body {
+    background-color: #f8f7fd;
+    color: #18122b;
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+    letter-spacing: -0.01em;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', sans-serif;
+    color: #18122b;
+    letter-spacing: -0.02em;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #0d091a; }
+::-webkit-scrollbar-thumb { background: #24174b; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #858bd1; }
+
+/* Code Snippet Box */
+pre {
+  background: #080512;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 0.75rem;
+  padding: 1rem;
+  overflow-x: auto;
+  font-size: 0.875rem;
+  color: #a5b4fc;
+}
+
+/* Custom Tactical Pitch Pattern adapted for Dark Series Media Brand */
+.bg-tactical-pitch {
+  background-color: #0d091a;
+  background-image: 
+    linear-gradient(to right, rgba(133, 139, 209, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(133, 139, 209, 0.08) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.tactical-chalk-line {
+  border-color: rgba(133, 139, 209, 0.35);
+  box-shadow: 0 0 1px rgba(133, 139, 209, 0.4);
+}
+
+/* Print styling for formal closeout document */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  body {
+    background-color: #FFFFFF !important;
+    color: #000000 !important;
+  }
+}

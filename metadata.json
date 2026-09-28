@@ -1,0 +1,6 @@
+{
+  "name": "ShoSoccer PWA — Project Closeout Report",
+  "description": "Interactive project closeout report, tactical delivery ledger, and commercial growth analysis for ShoSoccer Football Coaching Limited by Series Media Limited.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
