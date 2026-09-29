@@ -68,7 +68,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                 onClick={() => onNavigate('executive-summary')}
                 className="text-gray-400 hover:text-[#ff5733] transition-colors cursor-pointer"
               >
-                1. Executive Summary
+                Executive Summary
               </button>
             </div>
             <div>
@@ -84,7 +84,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                 onClick={() => onNavigate('delivery-scope')}
                 className="text-gray-400 hover:text-[#ff5733] transition-colors cursor-pointer"
               >
-                2. Scope Delivery Checklist
+                Scope Delivery Checklist
               </button>
             </div>
             <div>
@@ -92,7 +92,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                 onClick={() => onNavigate('commercial-growth')}
                 className="text-gray-400 hover:text-[#ff5733] transition-colors cursor-pointer"
               >
-                3. Commercial Performance & ROI
+                Commercial Performance & ROI
               </button>
             </div>
             <div>
@@ -108,7 +108,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                 onClick={() => onNavigate('sign-off')}
                 className="text-gray-400 hover:text-[#ff5733] transition-colors cursor-pointer"
               >
-                10. Legal Sign-Off
+                Legal Sign-Off
               </button>
             </div>
           </div>

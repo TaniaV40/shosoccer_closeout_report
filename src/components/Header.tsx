@@ -95,7 +95,7 @@ export const Header: React.FC<HeaderProps> = ({ activeSection, onNavigate }) => 
                 activeSection === 'executive-summary' ? 'text-[#a5b4fc] font-bold border-b-2 border-[#a5b4fc]' : ''
               }`}
             >
-              1. Executive Summary
+              Executive Summary
             </button>
             <button
               onClick={() => onNavigate('tactical-pitch')}
@@ -111,7 +111,7 @@ export const Header: React.FC<HeaderProps> = ({ activeSection, onNavigate }) => 
                 activeSection === 'delivery-scope' ? 'text-[#a5b4fc] font-bold border-b-2 border-[#a5b4fc]' : ''
               }`}
             >
-              2. Scope Delivery Checklist
+              Scope Delivery Checklist
             </button>
             <button
               onClick={() => onNavigate('commercial-growth')}
@@ -119,7 +119,7 @@ export const Header: React.FC<HeaderProps> = ({ activeSection, onNavigate }) => 
                 activeSection === 'commercial-growth' ? 'text-[#a5b4fc] font-bold border-b-2 border-[#a5b4fc]' : ''
               }`}
             >
-              3. Commercial ROI
+              Commercial ROI
             </button>
             <button
               onClick={() => onNavigate('contract-terms')}
@@ -135,7 +135,7 @@ export const Header: React.FC<HeaderProps> = ({ activeSection, onNavigate }) => 
                 activeSection === 'sign-off' ? 'text-[#a5b4fc] font-bold border-b-2 border-[#a5b4fc]' : ''
               }`}
             >
-              10. Legal Sign-Off
+              Legal Sign-Off
             </button>
           </nav>
         </div>
